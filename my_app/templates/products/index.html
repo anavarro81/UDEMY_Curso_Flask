@@ -1,0 +1,20 @@
+<h3> Contenido index.html </h3>
+
+{% extends "base.html" %}
+
+
+{% block body %}
+
+{% for key, product in products.items() %}
+<div>
+    <a href="{{ url_for('product.show', id=key) }}"> {{ product['name']}} </a>      
+</div>
+{% endfor %}
+
+
+{% endblock %}
+
+
+
+
+

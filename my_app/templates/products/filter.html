@@ -1,0 +1,14 @@
+<h3> {{product['name'] }}</h3>
+
+<p> {{ product['category'] }}</p>
+
+<p> Precio: {{ product['price'] | default('Precio no especificado', True) }}</p>
+
+
+{% if product['price'] > 500 %}
+    <p> Es demasiado caro, no me lo puedo permitir. </p>   
+{% else %}
+    <p> Está bien de precio. ¡Me lo quedo!  </p>   
+{% endif %}
+
+
